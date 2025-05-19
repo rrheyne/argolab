@@ -19,7 +19,7 @@ resource "proxmox_virtual_environment_vm" "this" {
 
   cpu {
     cores = each.value.cpu
-    type  = "host"
+    type  = "x86-64-v2-AES"
   }
 
   memory {
@@ -28,7 +28,7 @@ resource "proxmox_virtual_environment_vm" "this" {
 
   network_device {
     bridge      = "vmbr0"
-    vlan_id     = 150
+    vlan_id     = 0
     mac_address = each.value.mac_address
   }
 
@@ -68,12 +68,12 @@ resource "proxmox_virtual_environment_vm" "this" {
   initialization {
     datastore_id = each.value.datastore_id
     dns {
-      domain  = "kube.pc-tips.se"
-      servers = ["10.25.150.1"]
+      domain  = "midgard.blackwyng.com"
+      servers = ["10.10.1.254"]
     }
     ip_config {
       ipv4 {
-        address = "${each.value.ip}/24"
+        address = "${each.value.ip}/23"
         gateway = var.cluster.gateway
       }
     }

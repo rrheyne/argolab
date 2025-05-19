@@ -26,9 +26,9 @@ module "talos" {
 
   cluster = {
     name               = "talos"
-    endpoint           = "api.kube.pc-tips.se"
-    gateway            = "10.25.150.1"  # Network gateway
-    vip                = "10.25.150.10" # Control plane VIP
+    endpoint           = "10.10.0.5"
+    gateway            = "10.10.0.1"  # Network gateway
+    vip                = "10.10.0.5" # Control plane VIP
     talos_version      = "v1.9.5"
     proxmox_cluster    = "kube"
     kubernetes_version = "1.33.0" # renovate: github-releases=kubernetes/kubernetes
@@ -36,9 +36,9 @@ module "talos" {
 
   nodes = {
     "ctrl-00" = {
-      host_node     = "host3"
+      host_node     = "vhost1"
       machine_type  = "controlplane"
-      ip            = "10.25.150.11"
+      ip            = "10.10.1.11"
       mac_address   = "bc:24:11:e6:ba:07"
       vm_id         = 8101
       cpu           = 6
@@ -47,9 +47,9 @@ module "talos" {
       igpu          = false
     }
     "ctrl-01" = {
-      host_node     = "host3"
+      host_node     = "vhost1"
       machine_type  = "controlplane"
-      ip            = "10.25.150.12"
+      ip            = "10.10.1.12"
       mac_address   = "bc:24:11:44:94:5c"
       vm_id         = 8102
       cpu           = 6
@@ -58,9 +58,9 @@ module "talos" {
       igpu          = false
     }
     "ctrl-02" = {
-      host_node     = "host3"
+      host_node     = "vhost1"
       machine_type  = "controlplane"
-      ip            = "10.25.150.13"
+      ip            = "10.10.1.13"
       mac_address   = "bc:24:11:1e:1d:2f"
       vm_id         = 8103
       cpu           = 6
@@ -68,9 +68,9 @@ module "talos" {
       update        = false
     }
     "work-00" = {
-      host_node     = "host3"
+      host_node     = "vhost1"
       machine_type  = "worker"
-      ip            = "10.25.150.21"
+      ip            = "10.10.1.21"
       mac_address   = "bc:24:11:64:5b:cb"
       vm_id         = 8201
       cpu           = 8
@@ -86,9 +86,9 @@ module "talos" {
       }
     }
     "work-01" = {
-      host_node     = "host3"
+      host_node     = "vhost1"
       machine_type  = "worker"
-      ip            = "10.25.150.22"
+      ip            = "10.10.1.22"
       mac_address   = "bc:24:11:c9:22:c3"
       vm_id         = 8202
       cpu           = 8
@@ -104,9 +104,9 @@ module "talos" {
       }
     }
     "work-02" = {
-      host_node     = "host3"
+      host_node     = "vhost1"
       machine_type  = "worker"
-      ip            = "10.25.150.23"
+      ip            = "10.10.1.23"
       mac_address   = "bc:24:11:6f:20:03"
       vm_id         = 8203
       cpu           = 8

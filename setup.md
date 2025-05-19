@@ -18,15 +18,15 @@ tofu plan
 
 ## terraform.tfvars example
 proxmox = {
-  name         = "host3"
-  cluster_name = "host3"
+  name         = "vhost1"
+  cluster_name = "vhost1"
   endpoint     = "https://adress:8006"
   insecure     = false
   username     = "root"
   api_token    = "root@pam!ID=TOKEN"
 }proxmox = {
-  name         = "host3"
-  cluster_name = "host3"
+  name         = "vhost1"
+  cluster_name = "vhost1"
   endpoint     = "https://adress:8006"
   insecure     = false
   username     = "root"

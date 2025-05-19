@@ -18,7 +18,7 @@ spec:
         app: unrar
     spec:
       nodeSelector:
-        topology.kubernetes.io/zone: host3
+        topology.kubernetes.io/zone: vhost1
       securityContext:
         runAsNonRoot: true
         runAsUser: 2501
@@ -36,7 +36,7 @@ spec:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
             capabilities:
-              drop: [ "ALL" ]
+              drop: ["ALL"]
           resources:
             requests:
               cpu: 50m

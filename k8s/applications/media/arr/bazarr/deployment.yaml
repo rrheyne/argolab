@@ -18,7 +18,7 @@ spec:
         app: bazarr
     spec:
       nodeSelector:
-        topology.kubernetes.io/zone: host3
+        topology.kubernetes.io/zone: vhost1
       containers:
         - name: bazarr
           image: ghcr.io/hotio/bazarr:release-1.5.1

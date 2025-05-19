@@ -18,7 +18,7 @@ spec:
         app: sonarr
     spec:
       nodeSelector:
-        topology.kubernetes.io/zone: host3
+        topology.kubernetes.io/zone: vhost1
       securityContext:
         runAsNonRoot: true
         runAsUser: 2501
@@ -34,7 +34,7 @@ spec:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
             capabilities:
-              drop: [ "ALL" ]
+              drop: ["ALL"]
           ports:
             - name: http
               containerPort: 8989
@@ -64,4 +64,4 @@ spec:
           persistentVolumeClaim:
             claimName: media-share
         - name: tmp
-          emptyDir: { }
+          emptyDir: {}

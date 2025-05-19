@@ -18,7 +18,7 @@ spec:
         app: torrent
     spec:
       nodeSelector:
-        topology.kubernetes.io/zone: host3
+        topology.kubernetes.io/zone: vhost1
       securityContext:
         runAsNonRoot: true
         runAsUser: 2501
@@ -34,7 +34,7 @@ spec:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
             capabilities:
-              drop: [ "ALL" ]
+              drop: ["ALL"]
           args:
             - --repo=https://github.com/VueTorrent/VueTorrent
             - --root=/tmp/git-sync
@@ -61,7 +61,7 @@ spec:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
             capabilities:
-              drop: [ "ALL" ]
+              drop: ["ALL"]
           ports:
             - name: http
               containerPort: 8080
@@ -99,6 +99,6 @@ spec:
           persistentVolumeClaim:
             claimName: media-share
         - name: tmp
-          emptyDir: { }
+          emptyDir: {}
         - name: themes
-          emptyDir: { }
+          emptyDir: {}

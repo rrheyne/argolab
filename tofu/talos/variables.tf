@@ -31,7 +31,7 @@ variable "nodes" {
   type = map(object({
     host_node     = string
     machine_type  = string
-    datastore_id = optional(string, "velocity")
+    datastore_id = optional(string, "VMs")
     ip            = string
     mac_address   = string
     vm_id         = number

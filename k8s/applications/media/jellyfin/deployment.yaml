@@ -13,14 +13,14 @@ spec:
   template:
     spec:
       nodeSelector:
-        topology.kubernetes.io/zone: host3
+        topology.kubernetes.io/zone: vhost1
       securityContext:
         runAsNonRoot: true
         runAsUser: 2501
         runAsGroup: 2501
         fsGroup: 2501
         fsGroupChangePolicy: OnRootMismatch
-        supplementalGroups: [ 44, 104 ]
+        supplementalGroups: [44, 104]
         seccompProfile:
           type: RuntimeDefault
       containers:
@@ -30,7 +30,7 @@ spec:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
             capabilities:
-              drop: [ "ALL" ]
+              drop: ["ALL"]
           resources:
             requests:
               cpu: 1000m
