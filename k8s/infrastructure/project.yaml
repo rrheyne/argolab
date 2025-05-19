@@ -27,11 +27,11 @@ spec:
     - name: admin
       description: Full permissions
       policies:
-        - p, proj:infrastructure:admin, applications, *, *, allow
+        - p, proj:infrastructure:admin, applications, *, infrastructure/*, allow
     - name: readonly
       description: Read-only access
       policies:
-        - p, proj:infrastructure:readonly, applications, get, *, allow
+        - p, proj:infrastructure:readonly, applications, get, infrastructure/*, allow
   syncWindows:
     - kind: allow
       schedule: '* * * * *'
