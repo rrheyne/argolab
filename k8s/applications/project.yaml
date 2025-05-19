@@ -30,7 +30,7 @@ spec:
     - name: readonly
       description: Read-only access
       policies:
-        - p, proj:applications:readonly, applications, get, *, allow
+        - p, proj:applications:readonly, applications, get, applications/*, allow
   syncWindows:
     - kind: allow
       schedule: '* * * * *'
