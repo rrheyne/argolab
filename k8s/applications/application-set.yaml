@@ -11,7 +11,7 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/theepicsaxguy/homelab.git
+        repoURL: git@github.com:rrheyne/argolab.git
         revision: main
         directories:
           - path: k8s/applications/media
@@ -31,7 +31,7 @@ spec:
     spec:
       project: applications
       source:
-        repoURL: https://github.com/theepicsaxguy/homelab.git
+        repoURL: git@github.com:rrheyne/argolab.git
         targetRevision: main
         path: '{{ path }}'
         kustomize: {}  # Let Kustomize handle naming
