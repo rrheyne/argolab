@@ -24,7 +24,7 @@ For a deeper technical guide or troubleshooting steps, see [Getting Started](./g
 1. **Clone the repository and move into it:**
 
    ```bash
-   git clone https://github.com/theepicsaxguy/homelab.git
+   git clone git@github.com:rrheyne/argolab.git
    cd homelab
    ```
 

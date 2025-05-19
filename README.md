@@ -117,7 +117,7 @@ If you’re ready to deploy your foolproof homelab, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/theepicsaxguy/homelab.git
+   git clone git@github.com:rrheyne/argolab.git
    cd homelab
    ```
 
@@ -155,7 +155,7 @@ minutes:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/theepicsaxguy/homelab.git
+git clone git@github.com:rrheyne/argolab.git
 cd tofu/kubernetes
 
 # 2. Deploy the infrastructure
@@ -226,7 +226,7 @@ Ready to join the revolution? Here’s your starter pack:
 1. **Fork & Clone:**
 
    ```bash
-   git clone https://github.com/theepicsaxguy/homelab.git
+   git clone git@github.com:rrheyne/argolab.git
    cd homelab
    ```
 

@@ -12,7 +12,7 @@ export function QuickStart(): JSX.Element {
             <span className={styles.stepNumber}>1</span>
             <h3>Clone the Repository</h3>
             <pre className={styles.codeBlock}>
-              <code>git clone https://github.com/theepicsaxguy/homelab.git</code>
+              <code>git clone git@github.com:rrheyne/argolab.git</code>
             </pre>
           </div>
           <div className={styles.step}>

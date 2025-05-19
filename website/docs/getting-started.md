@@ -32,7 +32,7 @@ For a minimal demo or test setup, see the [quick‑start version](./quick-start.
    Download the required files and move into the working directory.
 
    ```bash
-   git clone https://github.com/theepicsaxguy/homelab.git
+   git clone git@github.com:rrheyne/argolab.git
    cd homelab
    ```
 
