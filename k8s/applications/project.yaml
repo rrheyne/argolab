@@ -26,7 +26,7 @@ spec:
     - name: admin
       description: Full permissions
       policies:
-        - p, proj:applications:admin, applications, *, *, allow
+        - p, proj:applications:admin, applications, get, applications/* allow
     - name: readonly
       description: Read-only access
       policies:
